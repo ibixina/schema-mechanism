@@ -12,15 +12,15 @@ from typing import Protocol
 
 logger = logging.getLogger('scripts')
 
-PYTHON_EXEC = '/home/archimidiz/PycharmProjects/schema39/.venv/bin/python'
-SCRIPT = 'src/examples/multi_arm_bandits.py'
+PYTHON_EXEC = '/home/archimidiz/PycharmProjects/schema39/.venv/bin/python'  # check for python
+SCRIPT = 'src/examples/multi_arm_bandits.py' # location of the program
 
 SOURCE_DIRS = [
     'src',
 ]
 
 EXPERIMENT_UID = str(int(time()))
-OUTPUT_DIR = Path(os.path.join('local/experiments', EXPERIMENT_UID))
+OUTPUT_DIR = Path(os.path.join('local/experiments', EXPERIMENT_UID)) # location for the output
 
 
 class TrialConfigurator(Protocol, Iterator[list[str]]):
