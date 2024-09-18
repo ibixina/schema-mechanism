@@ -1,0 +1,756 @@
+***** trial configuration 0: ['--steps', '10', '-M', '0.0', '-M', '0.25', '-M', '0.75', '-M', '1.0']
+***** start of run 0 *****
+2024-09-06 14:56:38,984 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652598".
+2024-09-06 14:56:38,984 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652598" in your environment variables.
+action: sit(M2)
+state: frozenset({'M2'})
+0,0,8,0.499
+action: sit(M2)
+state: frozenset({'M2'})
+1,0,8,0.498
+action: deposit
+state: frozenset({'P', 'M2'})
+2,-1,9,0.497
+action: deposit
+state: frozenset({'P', 'M2'})
+3,-1,9,0.496
+action: sit(M1)
+state: frozenset({'P', 'M2'})
+4,-1,9,0.495
+action: sit(M3)
+state: frozenset({'P', 'M2'})
+5,-1,9,0.494
+action: stand
+state: frozenset({'S'})
+6,-1,10,0.493
+action: sit(M0)
+state: frozenset({'M0'})
+7,-1,11,0.492
+action: deposit
+state: frozenset({'M0', 'P'})
+8,-2,11,0.491
+action: deposit
+state: frozenset({'M0', 'P'})
+9,-2,11,0.49
+2024-09-06 14:56:39,005 - examples - INFO - elapsed time: 0.015875816345214844s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652598
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: -2
+		Minimum winnings: -2
+		Maximum winnings: -2
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'P', 'M2'}): 4, frozenset({'M2'}): 2, frozenset({'M0', 'P'}): 2, frozenset({'S'}): 1, frozenset({'M0'}): 1})
+2024-09-06 14:56:39,006 - examples - INFO - baseline value: -0.0029885259655279862
+2024-09-06 14:56:39,006 - examples - INFO - known items: (n = 6)
+2024-09-06 14:56:39,006 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:39,006 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:39,007 - examples - INFO - 	SymbolicItem({'dv': -6.245309523302773e-05, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:39,007 - examples - INFO - 	SymbolicItem({'dv': -0.00018734505354187298, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:39,007 - examples - INFO - 	SymbolicItem({'dv': -0.0002497500038995394, 'pv': 0.0, 'source': 'M0'})
+2024-09-06 14:56:39,007 - examples - INFO - 	SymbolicItem({'dv': -0.0003112914735463281, 'pv': 0.0, 'source': 'M2'})
+2024-09-06 14:56:39,007 - examples - INFO - known schemas: (n = 11)
+2024-09-06 14:56:39,007 - examples - INFO - 	0 ->  /stand/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:39,007 - examples - INFO - 	1 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:39,007 - examples - INFO - 	2 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:39,007 - examples - INFO - 	3 ->  /deposit/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:39,007 - examples - INFO - 	4 ->  /play/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:39,007 - examples - INFO - 	5 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:39,007 - examples - INFO - 	6 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:39,007 - examples - INFO - 	7 ->  /sit(M2)/M2 [rel: 1.0] [composite? False][uid = 31]
+2024-09-06 14:56:39,007 - examples - INFO - 	8 ->  /deposit/P [rel: 1.0] [composite? False][uid = 40]
+2024-09-06 14:56:39,007 - examples - INFO - 	9 ->  /stand/S [rel: nan] [composite? False][uid = 54]
+2024-09-06 14:56:39,008 - examples - INFO - 	10 ->  /sit(M0)/M0 [rel: nan] [composite? False][uid = 61]
+2024-09-06 14:56:39,008 - examples - INFO - root
+2024-09-06 14:56:39,008 - examples - INFO - |-- M2
+2024-09-06 14:56:39,008 - examples - INFO - |-- P
+2024-09-06 14:56:39,008 - examples - INFO - |-- S
+2024-09-06 14:56:39,008 - examples - INFO - +-- M0
+
+***** end of run 0 *****
+
+***** start of run 1 *****
+2024-09-06 14:56:40,535 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652599".
+2024-09-06 14:56:40,535 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652599" in your environment variables.
+action: sit(M1)
+state: frozenset({'M1'})
+0,0,8,0.499
+action: sit(M0)
+state: frozenset({'M1'})
+1,0,8,0.498
+action: stand
+state: frozenset({'S'})
+2,0,9,0.497
+action: sit(M1)
+state: frozenset({'M1'})
+3,0,9,0.496
+action: stand
+state: frozenset({'S'})
+4,0,9,0.495
+action: stand
+state: frozenset({'S'})
+5,0,9,0.494
+action: sit(M0)
+state: frozenset({'M0'})
+6,0,10,0.493
+action: sit(M2)
+state: frozenset({'M0'})
+7,0,10,0.492
+action: sit(M0)
+state: frozenset({'M0'})
+8,0,10,0.491
+action: sit(M2)
+state: frozenset({'M0'})
+9,0,10,0.49
+2024-09-06 14:56:40,562 - examples - INFO - elapsed time: 0.021422147750854492s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652599
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: 0
+		Minimum winnings: 0
+		Maximum winnings: 0
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'M0'}): 4, frozenset({'M1'}): 3, frozenset({'S'}): 3})
+2024-09-06 14:56:40,562 - examples - INFO - baseline value: 0.0
+2024-09-06 14:56:40,562 - examples - INFO - known items: (n = 6)
+2024-09-06 14:56:40,563 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:40,563 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:40,563 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:40,563 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'M1'})
+2024-09-06 14:56:40,563 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:40,563 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'M0'})
+2024-09-06 14:56:40,563 - examples - INFO - known schemas: (n = 10)
+2024-09-06 14:56:40,563 - examples - INFO - 	0 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:40,563 - examples - INFO - 	1 ->  /deposit/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:40,563 - examples - INFO - 	2 ->  /stand/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:40,563 - examples - INFO - 	3 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:40,563 - examples - INFO - 	4 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:40,563 - examples - INFO - 	5 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:40,563 - examples - INFO - 	6 ->  /play/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:40,563 - examples - INFO - 	7 ->  /sit(M1)/M1 [rel: 1.0] [composite? False][uid = 31]
+2024-09-06 14:56:40,563 - examples - INFO - 	8 ->  /stand/S [rel: 1.0] [composite? False][uid = 41]
+2024-09-06 14:56:40,563 - examples - INFO - 	9 ->  /sit(M0)/M0 [rel: 1.0] [composite? False][uid = 52]
+2024-09-06 14:56:40,563 - examples - INFO - root
+2024-09-06 14:56:40,563 - examples - INFO - |-- M1
+2024-09-06 14:56:40,564 - examples - INFO - |-- S
+2024-09-06 14:56:40,564 - examples - INFO - +-- M0
+
+***** end of run 1 *****
+
+***** start of run 2 *****
+2024-09-06 14:56:42,095 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652601".
+2024-09-06 14:56:42,095 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652601" in your environment variables.
+action: sit(M1)
+state: frozenset({'M1'})
+0,0,8,0.499
+action: sit(M1)
+state: frozenset({'M1'})
+1,0,8,0.498
+action: play
+state: frozenset({'M1'})
+2,0,8,0.497
+action: sit(M0)
+state: frozenset({'M1'})
+3,0,8,0.496
+action: sit(M2)
+state: frozenset({'M1'})
+4,0,8,0.495
+action: sit(M2)
+state: frozenset({'M1'})
+5,0,8,0.494
+action: deposit
+state: frozenset({'P', 'M1'})
+6,-1,9,0.493
+action: sit(M0)
+state: frozenset({'P', 'M1'})
+7,-1,9,0.492
+action: sit(M3)
+state: frozenset({'P', 'M1'})
+8,-1,9,0.491
+action: deposit
+state: frozenset({'P', 'M1'})
+9,-1,9,0.49
+2024-09-06 14:56:42,118 - examples - INFO - elapsed time: 0.01757073402404785s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652601
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: -1
+		Minimum winnings: -1
+		Maximum winnings: -1
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'M1'}): 6, frozenset({'P', 'M1'}): 4})
+2024-09-06 14:56:42,119 - examples - INFO - baseline value: -0.0019970019995
+2024-09-06 14:56:42,119 - examples - INFO - known items: (n = 5)
+2024-09-06 14:56:42,119 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:42,120 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:42,120 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:42,120 - examples - INFO - 	SymbolicItem({'dv': -3.906196594446897e-06, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:42,120 - examples - INFO - 	SymbolicItem({'dv': -0.00024925074975, 'pv': 0.0, 'source': 'M1'})
+2024-09-06 14:56:42,120 - examples - INFO - known schemas: (n = 9)
+2024-09-06 14:56:42,120 - examples - INFO - 	0 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:42,120 - examples - INFO - 	1 ->  /play/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:42,120 - examples - INFO - 	2 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:42,120 - examples - INFO - 	3 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:42,120 - examples - INFO - 	4 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:42,120 - examples - INFO - 	5 ->  /deposit/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:42,120 - examples - INFO - 	6 ->  /stand/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:42,120 - examples - INFO - 	7 ->  /sit(M1)/M1 [rel: 1.0] [composite? False][uid = 31]
+2024-09-06 14:56:42,120 - examples - INFO - 	8 ->  /deposit/P [rel: 1.0] [composite? False][uid = 48]
+2024-09-06 14:56:42,120 - examples - INFO - root
+2024-09-06 14:56:42,120 - examples - INFO - |-- M1
+2024-09-06 14:56:42,120 - examples - INFO - +-- P
+
+***** end of run 2 *****
+
+***** start of run 3 *****
+2024-09-06 14:56:43,642 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652602".
+2024-09-06 14:56:43,642 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652602" in your environment variables.
+action: stand
+state: frozenset({'S'})
+0,0,7,0.499
+action: play
+state: frozenset({'S'})
+1,0,7,0.498
+action: deposit
+state: frozenset({'S'})
+2,0,7,0.497
+action: deposit
+state: frozenset({'S'})
+3,0,7,0.496
+action: sit(M1)
+state: frozenset({'M1'})
+4,0,8,0.495
+action: sit(M0)
+state: frozenset({'M1'})
+5,0,8,0.494
+action: sit(M0)
+state: frozenset({'M1'})
+6,0,8,0.493
+action: sit(M3)
+state: frozenset({'M1'})
+7,0,8,0.492
+action: sit(M0)
+state: frozenset({'M1'})
+8,0,8,0.491
+action: play
+state: frozenset({'M1'})
+9,0,8,0.49
+2024-09-06 14:56:43,664 - examples - INFO - elapsed time: 0.016737699508666992s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652602
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: 0
+		Minimum winnings: 0
+		Maximum winnings: 0
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'M1'}): 6, frozenset({'S'}): 4})
+2024-09-06 14:56:43,664 - examples - INFO - baseline value: 0.0
+2024-09-06 14:56:43,665 - examples - INFO - known items: (n = 5)
+2024-09-06 14:56:43,665 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:43,665 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:43,665 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:43,665 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'M1'})
+2024-09-06 14:56:43,665 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:43,665 - examples - INFO - known schemas: (n = 8)
+2024-09-06 14:56:43,665 - examples - INFO - 	0 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:43,665 - examples - INFO - 	1 ->  /play/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:43,665 - examples - INFO - 	2 ->  /stand/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:43,665 - examples - INFO - 	3 ->  /deposit/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:43,665 - examples - INFO - 	4 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:43,665 - examples - INFO - 	5 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:43,665 - examples - INFO - 	6 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:43,665 - examples - INFO - 	7 ->  /sit(M1)/M1 [rel: nan] [composite? False][uid = 31]
+2024-09-06 14:56:43,665 - examples - INFO - root
+2024-09-06 14:56:43,666 - examples - INFO - +-- M1
+
+***** end of run 3 *****
+
+***** start of run 4 *****
+2024-09-06 14:56:45,180 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652604".
+2024-09-06 14:56:45,180 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652604" in your environment variables.
+action: deposit
+state: frozenset({'S'})
+0,0,7,0.499
+action: sit(M2)
+state: frozenset({'M2'})
+1,0,8,0.498
+action: sit(M1)
+state: frozenset({'M2'})
+2,0,8,0.497
+action: deposit
+state: frozenset({'P', 'M2'})
+3,-1,9,0.496
+action: play
+state: frozenset({'L', 'M2'})
+4,-1,10,0.495
+action: deposit
+state: frozenset({'P', 'M2'})
+5,-2,10,0.494
+action: sit(M3)
+state: frozenset({'P', 'M2'})
+6,-2,10,0.493
+action: play
+state: frozenset({'W', 'M2'})
+7,0,12,0.492
+action: deposit
+state: frozenset({'P', 'M2'})
+8,-1,12,0.491
+action: play
+state: frozenset({'W', 'M2'})
+9,1,12,0.49
+2024-09-06 14:56:45,202 - examples - INFO - elapsed time: 0.01721668243408203s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652604
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: 1
+		Minimum winnings: 1
+		Maximum winnings: 1
+		Win percentage (over all episodes): 66.67%
+		Machines played (over all episodes): Counter({2: 3})
+		States visited (over all episodes): Counter({frozenset({'P', 'M2'}): 4, frozenset({'M2'}): 2, frozenset({'W', 'M2'}): 2, frozenset({'S'}): 1, frozenset({'L', 'M2'}): 1})
+2024-09-06 14:56:45,203 - examples - INFO - baseline value: -0.000990020977512996
+2024-09-06 14:56:45,203 - examples - INFO - known items: (n = 5)
+2024-09-06 14:56:45,203 - examples - INFO - 	SymbolicItem({'dv': 0.00025166884594071096, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:45,203 - examples - INFO - 	SymbolicItem({'dv': 6.287070912497231e-08, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:45,203 - examples - INFO - 	SymbolicItem({'dv': -0.0001249198274478686, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:45,203 - examples - INFO - 	SymbolicItem({'dv': -0.00013279701827802808, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:45,203 - examples - INFO - 	SymbolicItem({'dv': -0.000245977607462795, 'pv': 0.0, 'source': 'M2'})
+2024-09-06 14:56:45,203 - examples - INFO - known schemas: (n = 12)
+2024-09-06 14:56:45,203 - examples - INFO - 	0 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:45,203 - examples - INFO - 	1 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:45,203 - examples - INFO - 	2 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:45,203 - examples - INFO - 	3 ->  /deposit/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:45,203 - examples - INFO - 	4 ->  /play/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:45,204 - examples - INFO - 	5 ->  /stand/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:45,204 - examples - INFO - 	6 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:45,204 - examples - INFO - 	7 ->  /sit(M2)/M2 [rel: nan] [composite? False][uid = 31]
+2024-09-06 14:56:45,204 - examples - INFO - 	8 ->  /deposit/P [rel: 1.0] [composite? False][uid = 40]
+2024-09-06 14:56:45,204 - examples - INFO - 	9 ->  /play/L [rel: 0.0] [composite? False][uid = 47]
+2024-09-06 14:56:45,204 - examples - INFO - 	10 ->  /play/W [rel: 1.0] [composite? False][uid = 57]
+2024-09-06 14:56:45,204 - examples - INFO - 	11 ->  /W/ [rel: nan] [composite? True][uid = 59]
+2024-09-06 14:56:45,204 - examples - INFO - 		controller components: (n = 0)
+2024-09-06 14:56:45,204 - examples - INFO - root
+2024-09-06 14:56:45,204 - examples - INFO - |-- M2
+2024-09-06 14:56:45,204 - examples - INFO - |-- P
+2024-09-06 14:56:45,204 - examples - INFO - |-- L
+2024-09-06 14:56:45,204 - examples - INFO - +-- W
+
+***** end of run 4 *****
+
+***** start of run 5 *****
+2024-09-06 14:56:46,711 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652605".
+2024-09-06 14:56:46,711 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652605" in your environment variables.
+action: stand
+state: frozenset({'S'})
+0,0,7,0.499
+action: stand
+state: frozenset({'S'})
+1,0,7,0.498
+action: sit(M0)
+state: frozenset({'M0'})
+2,0,8,0.497
+action: sit(M3)
+state: frozenset({'M0'})
+3,0,8,0.496
+action: sit(M1)
+state: frozenset({'M0'})
+4,0,8,0.495
+action: sit(M0)
+state: frozenset({'M0'})
+5,0,8,0.494
+action: sit(M2)
+state: frozenset({'M0'})
+6,0,8,0.493
+action: sit(M0)
+state: frozenset({'M0'})
+7,0,8,0.492
+action: sit(M1)
+state: frozenset({'M0'})
+8,0,8,0.491
+action: sit(M0)
+state: frozenset({'M0'})
+9,0,8,0.49
+2024-09-06 14:56:46,734 - examples - INFO - elapsed time: 0.01848149299621582s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652605
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: 0
+		Minimum winnings: 0
+		Maximum winnings: 0
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'M0'}): 8, frozenset({'S'}): 2})
+2024-09-06 14:56:46,734 - examples - INFO - baseline value: 0.0
+2024-09-06 14:56:46,734 - examples - INFO - known items: (n = 5)
+2024-09-06 14:56:46,735 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:46,735 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:46,735 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:46,735 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'M0'})
+2024-09-06 14:56:46,735 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:46,735 - examples - INFO - known schemas: (n = 8)
+2024-09-06 14:56:46,735 - examples - INFO - 	0 ->  /play/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:46,735 - examples - INFO - 	1 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:46,735 - examples - INFO - 	2 ->  /deposit/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:46,735 - examples - INFO - 	3 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:46,735 - examples - INFO - 	4 ->  /stand/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:46,735 - examples - INFO - 	5 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:46,735 - examples - INFO - 	6 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:46,735 - examples - INFO - 	7 ->  /sit(M0)/M0 [rel: 1.0] [composite? False][uid = 31]
+2024-09-06 14:56:46,735 - examples - INFO - root
+2024-09-06 14:56:46,735 - examples - INFO - +-- M0
+
+***** end of run 5 *****
+
+***** start of run 6 *****
+2024-09-06 14:56:47,909 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652607".
+2024-09-06 14:56:47,909 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652607" in your environment variables.
+action: sit(M3)
+state: frozenset({'M3'})
+0,0,8,0.499
+action: sit(M3)
+state: frozenset({'M3'})
+1,0,8,0.498
+action: sit(M3)
+state: frozenset({'M3'})
+2,0,8,0.497
+action: deposit
+state: frozenset({'P', 'M3'})
+3,-1,9,0.496
+action: sit(M3)
+state: frozenset({'P', 'M3'})
+4,-1,9,0.495
+action: sit(M3)
+state: frozenset({'P', 'M3'})
+5,-1,9,0.494
+action: sit(M3)
+state: frozenset({'P', 'M3'})
+6,-1,9,0.493
+action: stand
+state: frozenset({'S'})
+7,-1,10,0.492
+action: sit(M2)
+state: frozenset({'M2'})
+8,-1,11,0.491
+action: stand
+state: frozenset({'S'})
+9,-1,11,0.49
+2024-09-06 14:56:47,927 - examples - INFO - elapsed time: 0.01407623291015625s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652607
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: -1
+		Minimum winnings: -1
+		Maximum winnings: -1
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'P', 'M3'}): 4, frozenset({'M3'}): 3, frozenset({'S'}): 2, frozenset({'M2'}): 1})
+2024-09-06 14:56:47,927 - examples - INFO - baseline value: -0.0019910169825104965
+2024-09-06 14:56:47,927 - examples - INFO - known items: (n = 6)
+2024-09-06 14:56:47,927 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:47,927 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:47,927 - examples - INFO - 	SymbolicItem({'dv': -7.803788163391435e-09, 'pv': 0.0, 'source': 'M2'})
+2024-09-06 14:56:47,927 - examples - INFO - 	SymbolicItem({'dv': -9.756734817667806e-09, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:47,927 - examples - INFO - 	SymbolicItem({'dv': -3.120344697132065e-05, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:47,927 - examples - INFO - 	SymbolicItem({'dv': -0.00024882453573600485, 'pv': 0.0, 'source': 'M3'})
+2024-09-06 14:56:47,927 - examples - INFO - known schemas: (n = 11)
+2024-09-06 14:56:47,927 - examples - INFO - 	0 ->  /deposit/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:47,927 - examples - INFO - 	1 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:47,927 - examples - INFO - 	2 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:47,927 - examples - INFO - 	3 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:47,927 - examples - INFO - 	4 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:47,928 - examples - INFO - 	5 ->  /play/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:47,928 - examples - INFO - 	6 ->  /stand/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:47,928 - examples - INFO - 	7 ->  /sit(M3)/M3 [rel: 1.0] [composite? False][uid = 31]
+2024-09-06 14:56:47,928 - examples - INFO - 	8 ->  /deposit/P [rel: nan] [composite? False][uid = 44]
+2024-09-06 14:56:47,928 - examples - INFO - 	9 ->  /stand/S [rel: 1.0] [composite? False][uid = 64]
+2024-09-06 14:56:47,928 - examples - INFO - 	10 ->  /sit(M2)/M2 [rel: nan] [composite? False][uid = 71]
+2024-09-06 14:56:47,928 - examples - INFO - root
+2024-09-06 14:56:47,928 - examples - INFO - |-- M3
+2024-09-06 14:56:47,928 - examples - INFO - |-- P
+2024-09-06 14:56:47,928 - examples - INFO - |-- S
+2024-09-06 14:56:47,928 - examples - INFO - +-- M2
+
+***** end of run 6 *****
+
+***** start of run 7 *****
+2024-09-06 14:56:49,033 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652608".
+2024-09-06 14:56:49,033 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652608" in your environment variables.
+action: sit(M3)
+state: frozenset({'M3'})
+0,0,8,0.499
+action: sit(M3)
+state: frozenset({'M3'})
+1,0,8,0.498
+action: sit(M0)
+state: frozenset({'M3'})
+2,0,8,0.497
+action: sit(M3)
+state: frozenset({'M3'})
+3,0,8,0.496
+action: sit(M0)
+state: frozenset({'M3'})
+4,0,8,0.495
+action: sit(M0)
+state: frozenset({'M3'})
+5,0,8,0.494
+action: sit(M3)
+state: frozenset({'M3'})
+6,0,8,0.493
+action: sit(M3)
+state: frozenset({'M3'})
+7,0,8,0.492
+action: stand
+state: frozenset({'S'})
+8,0,9,0.491
+action: stand
+state: frozenset({'S'})
+9,0,9,0.49
+2024-09-06 14:56:49,046 - examples - INFO - elapsed time: 0.00938105583190918s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652608
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: 0
+		Minimum winnings: 0
+		Maximum winnings: 0
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'M3'}): 8, frozenset({'S'}): 2})
+2024-09-06 14:56:49,046 - examples - INFO - baseline value: 0.0
+2024-09-06 14:56:49,046 - examples - INFO - known items: (n = 5)
+2024-09-06 14:56:49,046 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:49,046 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:49,046 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:49,046 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'M3'})
+2024-09-06 14:56:49,046 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:49,046 - examples - INFO - known schemas: (n = 9)
+2024-09-06 14:56:49,047 - examples - INFO - 	0 ->  /play/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:49,047 - examples - INFO - 	1 ->  /stand/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:49,047 - examples - INFO - 	2 ->  /deposit/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:49,047 - examples - INFO - 	3 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:49,047 - examples - INFO - 	4 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:49,047 - examples - INFO - 	5 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:49,047 - examples - INFO - 	6 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:49,047 - examples - INFO - 	7 ->  /sit(M3)/M3 [rel: 1.0] [composite? False][uid = 31]
+2024-09-06 14:56:49,047 - examples - INFO - 	8 ->  /stand/S [rel: 1.0] [composite? False][uid = 59]
+2024-09-06 14:56:49,047 - examples - INFO - root
+2024-09-06 14:56:49,047 - examples - INFO - |-- M3
+2024-09-06 14:56:49,047 - examples - INFO - +-- S
+
+***** end of run 7 *****
+
+***** start of run 8 *****
+2024-09-06 14:56:50,145 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652609".
+2024-09-06 14:56:50,145 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652609" in your environment variables.
+action: play
+state: frozenset({'S'})
+0,0,7,0.499
+action: play
+state: frozenset({'S'})
+1,0,7,0.498
+action: sit(M0)
+state: frozenset({'M0'})
+2,0,8,0.497
+action: stand
+state: frozenset({'S'})
+3,0,9,0.496
+action: stand
+state: frozenset({'S'})
+4,0,9,0.495
+action: sit(M3)
+state: frozenset({'M3'})
+5,0,10,0.494
+action: sit(M1)
+state: frozenset({'M3'})
+6,0,10,0.493
+action: sit(M0)
+state: frozenset({'M3'})
+7,0,10,0.492
+action: stand
+state: frozenset({'S'})
+8,0,10,0.491
+action: stand
+state: frozenset({'S'})
+9,0,10,0.49
+2024-09-06 14:56:50,164 - examples - INFO - elapsed time: 0.01561737060546875s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652609
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: 0
+		Minimum winnings: 0
+		Maximum winnings: 0
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'S'}): 6, frozenset({'M3'}): 3, frozenset({'M0'}): 1})
+2024-09-06 14:56:50,165 - examples - INFO - baseline value: 0.0
+2024-09-06 14:56:50,165 - examples - INFO - known items: (n = 6)
+2024-09-06 14:56:50,165 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:50,165 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:50,165 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:50,165 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'M0'})
+2024-09-06 14:56:50,165 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:50,165 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'M3'})
+2024-09-06 14:56:50,165 - examples - INFO - known schemas: (n = 10)
+2024-09-06 14:56:50,166 - examples - INFO - 	0 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:50,166 - examples - INFO - 	1 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:50,166 - examples - INFO - 	2 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:50,166 - examples - INFO - 	3 ->  /play/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:50,166 - examples - INFO - 	4 ->  /deposit/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:50,166 - examples - INFO - 	5 ->  /stand/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:50,166 - examples - INFO - 	6 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:50,166 - examples - INFO - 	7 ->  /sit(M0)/M0 [rel: 0.0] [composite? False][uid = 31]
+2024-09-06 14:56:50,166 - examples - INFO - 	8 ->  /stand/S [rel: 1.0] [composite? False][uid = 39]
+2024-09-06 14:56:50,166 - examples - INFO - 	9 ->  /sit(M3)/M3 [rel: nan] [composite? False][uid = 46]
+2024-09-06 14:56:50,166 - examples - INFO - root
+2024-09-06 14:56:50,166 - examples - INFO - |-- M0
+2024-09-06 14:56:50,166 - examples - INFO - |-- S
+2024-09-06 14:56:50,166 - examples - INFO - +-- M3
+
+***** end of run 8 *****
+
+***** start of run 9 *****
+2024-09-06 14:56:51,273 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1725652610".
+2024-09-06 14:56:51,273 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1725652610" in your environment variables.
+action: stand
+state: frozenset({'S'})
+0,0,7,0.499
+action: play
+state: frozenset({'S'})
+1,0,7,0.498
+action: sit(M3)
+state: frozenset({'M3'})
+2,0,8,0.497
+action: sit(M3)
+state: frozenset({'M3'})
+3,0,8,0.496
+action: sit(M3)
+state: frozenset({'M3'})
+4,0,8,0.495
+action: play
+state: frozenset({'M3'})
+5,0,8,0.494
+action: sit(M0)
+state: frozenset({'M3'})
+6,0,8,0.493
+action: sit(M3)
+state: frozenset({'M3'})
+7,0,8,0.492
+action: sit(M1)
+state: frozenset({'M3'})
+8,0,8,0.491
+action: sit(M1)
+state: frozenset({'M3'})
+9,0,8,0.49
+2024-09-06 14:56:51,285 - examples - INFO - elapsed time: 0.008345603942871094s
+Environment Summary (multi-arm-bandits):
+	Random Seed: 1725652610
+	Machines:
+		M0[p_win=0.0]
+		M1[p_win=0.25]
+		M2[p_win=0.75]
+		M3[p_win=1.0]
+	Mean Probability of Win: 0.5
+Performance Summary:
+		Episodes: 1
+		Steps (over all episodes): 10
+		Average winnings: 0
+		Minimum winnings: 0
+		Maximum winnings: 0
+		Win percentage (over all episodes): 0.00%
+		Machines played (over all episodes): Counter()
+		States visited (over all episodes): Counter({frozenset({'M3'}): 8, frozenset({'S'}): 2})
+2024-09-06 14:56:51,285 - examples - INFO - baseline value: 0.0
+2024-09-06 14:56:51,285 - examples - INFO - known items: (n = 5)
+2024-09-06 14:56:51,285 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 1.0, 'source': 'W'})
+2024-09-06 14:56:51,285 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -1.0, 'source': 'L'})
+2024-09-06 14:56:51,286 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': -0.5, 'source': 'P'})
+2024-09-06 14:56:51,286 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'M3'})
+2024-09-06 14:56:51,286 - examples - INFO - 	SymbolicItem({'dv': 0.0, 'pv': 0.0, 'source': 'S'})
+2024-09-06 14:56:51,286 - examples - INFO - known schemas: (n = 8)
+2024-09-06 14:56:51,286 - examples - INFO - 	0 ->  /sit(M1)/ [rel: nan] [composite? False][uid = 14]
+2024-09-06 14:56:51,286 - examples - INFO - 	1 ->  /sit(M3)/ [rel: nan] [composite? False][uid = 16]
+2024-09-06 14:56:51,286 - examples - INFO - 	2 ->  /sit(M2)/ [rel: nan] [composite? False][uid = 18]
+2024-09-06 14:56:51,286 - examples - INFO - 	3 ->  /play/ [rel: nan] [composite? False][uid = 20]
+2024-09-06 14:56:51,286 - examples - INFO - 	4 ->  /stand/ [rel: nan] [composite? False][uid = 22]
+2024-09-06 14:56:51,286 - examples - INFO - 	5 ->  /deposit/ [rel: nan] [composite? False][uid = 24]
+2024-09-06 14:56:51,286 - examples - INFO - 	6 ->  /sit(M0)/ [rel: nan] [composite? False][uid = 26]
+2024-09-06 14:56:51,286 - examples - INFO - 	7 ->  /sit(M3)/M3 [rel: 1.0] [composite? False][uid = 31]
+2024-09-06 14:56:51,286 - examples - INFO - root
+2024-09-06 14:56:51,286 - examples - INFO - +-- M3
+
+***** end of run 9 *****
