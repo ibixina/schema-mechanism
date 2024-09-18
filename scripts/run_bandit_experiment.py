@@ -12,7 +12,7 @@ from typing import Protocol
 
 logger = logging.getLogger('scripts')
 
-PYTHON_EXEC = 'venv/Scripts/python'
+PYTHON_EXEC = '/home/archimidiz/PycharmProjects/schema39/.venv/bin/python'
 SCRIPT = 'src/examples/multi_arm_bandits.py'
 
 SOURCE_DIRS = [
@@ -105,7 +105,7 @@ class NeedleInAHaystackTrialConfigurator(TrialConfigurator):
         return [*self.base_run_args, *machine_args]
 
 
-DEFAULT_STEPS = 10000
+DEFAULT_STEPS = 10
 DEFAULT_RUNS_PER_TRIAL = 10
 
 
