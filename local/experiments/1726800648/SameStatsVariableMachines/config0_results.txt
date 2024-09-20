@@ -1,0 +1,4 @@
+***** trial configuration 0: ['--steps', '10', '-M', '0.0', '-M', '0.25', '-M', '0.75', '-M', '1.0']
+***** start of run 0 *****
+2024-09-19 21:51:17,334 - schema_mechanism.util - WARNING - Initializing random number generator using seed="1726800649".
+2024-09-19 21:51:17,335 - schema_mechanism.util - WARNING - For reproducibility, you should also set "PYTHONHASHSEED=1726800649" in your environment variables.

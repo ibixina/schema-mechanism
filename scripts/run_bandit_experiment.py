@@ -105,8 +105,8 @@ class NeedleInAHaystackTrialConfigurator(TrialConfigurator):
         return [*self.base_run_args, *machine_args]
 
 
-DEFAULT_STEPS = 10
-DEFAULT_RUNS_PER_TRIAL = 10
+DEFAULT_STEPS = 100
+DEFAULT_RUNS_PER_TRIAL = 100
 
 
 def parse_args() -> argparse.Namespace:

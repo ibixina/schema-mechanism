@@ -515,10 +515,13 @@ def main():
         )
 
         display_environment_summary(env)
+        # print("Performance Summary")
         display_performance_summary([episode_summary])
 
         display_item_values()
+        # print("Schema Known")
         display_known_schemas(schema_mechanism)
+        print("Schema Memory")
         display_schema_memory(schema_mechanism)
 
         # this save is in addition to any runner callbacks to make sure final model is persisted
